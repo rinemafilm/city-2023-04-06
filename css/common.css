@@ -24,18 +24,91 @@ body {
     margin: 0 auto;
 }
 
-.cards {
+.header {
     display: flex;
+    align-items: center;
+    height: 100px;
     gap: 30px;
 }
 
+.gnb {
+    display: flex;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.gnb li a {
+    display: block;
+    padding: 10px 26px;
+}
+
+.btn_login {
+    border: 1px solid goldenrod;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_login:hover {
+    background-color: transparent;
+    color: goldenrod;
+    transition: all 0.3s;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
 .cards li {
+    position: relative;
+}
+
+.cards li:first-child {
+    flex: 1;
+}
+.cards li:last-child {
+    flex: 1;
+}
+
+.cards li .photo {
     height: 300px;
 }
 
-.cards img {
+.cards .photo img {
     width: 100%;
     display: block;
     height: 100%;
     object-fit: cover;
+    filter: brightness(50%);
+}
+
+.cards .user {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 5px;
+}
+
+.cards .user .profile{
+    width: 40px;
+    height: 40px;
+}
+
+.cards .user .profile img{
+    width: 100%;
+    display: block;
+    border-radius: 100%;
+}
+
+.cards .user .info .job {
+    font-size: 10px;
+    color: rgba(255, 255, 2555, 0.6);
 }
